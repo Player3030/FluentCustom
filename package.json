@@ -1,0 +1,16 @@
+{
+  "name": "skylibrary",
+  "version": "1.0",
+  "description": "",
+  "main": "init.lua",
+  "scripts": {
+    "rojo": "mkdirp dist && rojo build -o dist/main.rbxm",
+    "bundle": "pnpm run rojo && lune build"
+  },
+  "keywords": [],
+  "author": "naosei & naka",
+  "license": "MIT",
+  "devDependencies": {
+    "mkdirp": "^3.0.1"
+  }
+}
