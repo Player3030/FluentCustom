@@ -1,6 +1,23 @@
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/Example.lua"))()
+print("Carregando Fluent...")
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/main.lua"))()
+if not Fluent then
+    error("Falha ao carregar Fluent")
+end
+print("Fluent carregado:", Fluent)
+
+print("Carregando SaveManager...")
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/Addons/SaveManager.lua"))()
+if not SaveManager then
+    error("Falha ao carregar SaveManager")
+end
+print("SaveManager carregado:", SaveManager)
+
+print("Carregando InterfaceManager...")
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/Addons/InterfaceManager.lua"))()
+if not InterfaceManager then
+    error("Falha ao carregar InterfaceManager")
+end
+print("InterfaceManager carregado:", InterfaceManager)
 
 local Window = Fluent:CreateWindow({
     Title = "Sky-09" .. Fluent.Version,
