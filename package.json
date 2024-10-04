@@ -15,6 +15,6 @@
   "license": "MIT",
   "devDependencies": {
     "mkdirp": "^3.0.1",
-    "rimraf": "^3.0.2"  // Adicione rimraf se você for usá-lo para limpeza
+    "rimraf": "^3.0.2"
   }
 }
