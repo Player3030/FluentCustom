@@ -6,14 +6,14 @@ end
 print("Fluent carregado:", Fluent)
 
 print("Carregando SaveManager...")
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/Addons/SaveManager.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/Addons/SaveManager.lua"))()
 if not SaveManager then
     error("Falha ao carregar SaveManager")
 end
 print("SaveManager carregado:", SaveManager)
 
 print("Carregando InterfaceManager...")
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/Addons/InterfaceManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/Addons/InterfaceManager.lua"))()
 if not InterfaceManager then
     error("Falha ao carregar InterfaceManager")
 end
