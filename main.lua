@@ -19,17 +19,18 @@ if not InterfaceManager then
 end
 print("InterfaceManager carregado:", InterfaceManager)
 
+-- Criar janela principal com Fluent
 local Window = Fluent:CreateWindow({
-    Title = "Sky-09" .. Fluent.Version,
-    SubTitle = "by  naosei & naka",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- O efeito de desfoque pode ser detectável, definir como false desativa o desfoque completamente
-    Theme = "Escuro",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Usado quando não há uma tecla para minimizar
+    Title = "Sky-09" .. Fluent.Version, -- Título da janela
+    SubTitle = "by naosei & naka", -- Subtítulo
+    TabWidth = 160, -- Largura da aba
+    Size = UDim2.fromOffset(580, 460), -- Tamanho da janela
+    Acrylic = true, -- Efeito de desfoque ativado
+    Theme = "Escuro", -- Tema da interface
+    MinimizeKey = Enum.KeyCode.LeftControl -- Tecla para minimizar
 })
 
--- Fluent fornece ícones Lucide https://lucide.dev/icons/ para as abas, ícones são opcionais
+-- Adicionar abas
 local Tabs = {
     Inicio = Window:AddTab({ Title = "Início", Icon = "" })
 }
@@ -38,37 +39,31 @@ local Options = Fluent.Options
 
 -- Notificação ao carregar o script
 Fluent:Notify({
-    Title = "Sucessy",
-    Content = "O script foi carregado.",
-    Duration = 8
+    Title = "Sucessy", -- Título da notificação
+    Content = "O script foi carregado.", -- Conteúdo da notificação
+    Duration = 8 -- Duração da notificação
 })
 
--- Addons:
--- SaveManager (Permite ter um sistema de configuração)
--- InterfaceManager (Permite ter um sistema de gerenciamento de interface)
-
--- Vincula a biblioteca aos gerenciadores
+-- Configuração dos Addons
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
 -- Ignorar configurações de tema.
 SaveManager:IgnoreThemeSettings()
 
--- Adicionar índices de elementos que o gerenciador de salvamento deve ignorar
+-- Adicionar elementos ignorados pelo sistema de salvamento
 SaveManager:SetIgnoreIndexes({})
 
--- Exemplo de uso:
--- um script hub pode ter temas em uma pasta global
--- e configurações de jogo em uma pasta separada por jogo
+-- Definir pasta para salvar as configurações
 InterfaceManager:SetFolder("FluentScriptHub")
 SaveManager:SetFolder("FluentScriptHub/jogo-especifico")
 
--- Constrói a seção da interface e configurações na aba "Início"
+-- Construir interface e adicionar a seção na aba "Início"
 InterfaceManager:BuildInterfaceSection(Tabs.Inicio)
 SaveManager:BuildConfigSection(Tabs.Inicio)
 
--- Seleciona a aba "Início" ao carregar
+-- Selecionar a aba "Início" ao carregar
 Window:SelectTab(1)
 
--- Carregar automaticamente uma configuração marcada para auto carregar
+-- Carregar configuração automaticamente se configurada
 SaveManager:LoadAutoloadConfig()
