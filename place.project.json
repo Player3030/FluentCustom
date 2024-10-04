@@ -1,18 +1,33 @@
 {
-    "name": "Fluent",
-    "tree": {
-      "$className": "DataModel",
-      "ReplicatedStorage": {
-        "Fluent": {
-          "$path": "src"
+  "name": "Fluent",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Fluent": {
+        "$path": "src"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Example": {
+          "$path": "Example.client.lua"
+        },
+        "OtherScript": {
+          "$path": "Client/Other.client.lua"
         }
+      }
+    },
+    "src": {
+      "$path": "src",
+      "Client": {
+        "$path": "src/Client"
       },
-      "StarterPlayer": {
-        "StarterPlayerScripts": {
-          "Example": {
-            "$path": "Example.client.lua"
-          }
-        }
+      "Server": {
+        "$path": "src/Server"
+      },
+      "Shared": {
+        "$path": "src/Shared"
       }
     }
   }
+}
