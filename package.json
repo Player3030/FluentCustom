@@ -1,16 +1,20 @@
 {
   "name": "skylibrary",
-  "version": "1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A Lua library for Roblox development.",
   "main": "init.lua",
   "scripts": {
+    "test": "mocha", 
+    "lint": "eslint .",
+    "clean": "rimraf dist",
     "rojo": "mkdirp dist && rojo build -o dist/main.rbxm",
     "bundle": "pnpm run rojo && lune build"
   },
-  "keywords": [],
+  "keywords": ["Roblox", "Lua", "Library"],
   "author": "naosei & naka",
   "license": "MIT",
   "devDependencies": {
-    "mkdirp": "^3.0.1"
+    "mkdirp": "^3.0.1",
+    "rimraf": "^3.0.2"  // Adicione rimraf se você for usá-lo para limpeza
   }
 }
