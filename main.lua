@@ -1,5 +1,5 @@
 print("Carregando Fluent...")
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main/main.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/Player3030/FluentCustom/main.lua"))()
 if not Fluent then
     error("Falha ao carregar Fluent")
 end
